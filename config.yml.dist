@@ -1,0 +1,7 @@
+datastore:
+  engine: sqlite
+  database_name: foo.db
+provider:
+  morningstar:
+    username: foo
+    password: bar
