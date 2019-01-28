@@ -18,13 +18,11 @@ cd morningstar
 python setup.py install
 ```
 
-Once installed, a configuration file is required within your home folder (~):
+Once installed, a configuration file (`config-morningstar.yml` or `.config-morningstar.yml`) is required within your home folder (~). The content can be derived from [config-morningstar.yml.dist](/config-morningstar.yml.dist):
 
 ```
-mkdir -p ~/morningstar-py & touch $_/config-morningstar.yml
+cp config-morningstar.yml.dist ~/.config-morningstar.yml
 ```
-
-The content of the config file can be derived from [config-morningstar.yml.dist](/config-morningstar.yml.dist)
 
 ## Usage
 
