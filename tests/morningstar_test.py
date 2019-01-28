@@ -7,7 +7,7 @@ from morningstar.provider.morningstar import Morningstar
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-CONFIG_PATH = '../config-morningstar.yml.dist'
+CONFIG_PATH = 'config-morningstar.yml.dist'
 CONFIG = yaml.safe_load(open(CONFIG_PATH))['provider']['morningstar']
 CONFIG_LIVE = None
 try:
