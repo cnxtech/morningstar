@@ -10,16 +10,18 @@ Install as a dependency using pip:
 # Not ready yet
 pip install morningstar
 ```
-or using pip directly accessing the git repository:
+or install from source:
 
 ```
-pip install git+ssh://git@gitlab.com/aaaccell/morningstar.git
+git clone git@github.com:aaaccell/morningstar.git
+cd morningstar
+python setup.py install
 ```
 
 Once installed, a configuration file is required within your home folder (~):
 
 ```
-mkdir -p ~/morningstar-py & touch $_/config.yml
+mkdir -p ~/morningstar-py & touch $_/config-morningstar.yml
 ```
 
 The content of the config file can be derived from [config-morningstar.yml.dist](/config-morningstar.yml.dist)
