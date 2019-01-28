@@ -1,4 +1,4 @@
-# Morningstar API Client
+# Morningstar API Client ![build](https://travis-ci.com/aaaccell/morningstar.svg?branch=master)
 
 This project provides a client to the Morningsar Web Services endpoints.
 
