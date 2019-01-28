@@ -3,12 +3,14 @@ import os
 import yaml
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-CONFIG_FILE = "config.yml"
+CONFIG_FILE = "config-morningstar.yml"
 
 config = None
-for loc in os.curdir, os.path.expanduser("~"), os.environ.get("MORNINGSTAR_CONFIG"):
+for loc in os.path.join(os.curdir, CONFIG_FILE), \
+           os.path.expanduser("~/{}".format(CONFIG_FILE)), \
+           os.path.expanduser("~/.{}".format(CONFIG_FILE)):
     try:
-        with open(os.path.join(loc, CONFIG_FILE)) as source:
+        with open(loc) as source:
             config = yaml.safe_load(source)
     except IOError:
         pass

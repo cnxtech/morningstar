@@ -22,7 +22,7 @@ Once installed, a configuration file is required within your home folder (~):
 mkdir -p ~/morningstar-py & touch $_/config.yml
 ```
 
-The content of the config file can be derived from [config.yml.dist](https://gitlab.com/aaaccell/morningstar/blob/master/config.yml.dist)
+The content of the config file can be derived from [config-morningstar.yml.dist](https://gitlab.com/aaaccell/morningstar/blob/master/config-morningstar.yml.dist)
 
 ## Usage
 

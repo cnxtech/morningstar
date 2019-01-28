@@ -1,15 +1,15 @@
 from morningstar.models.ms_result import MSResult
 
-
-class MSResponse:
+class MSResponse():
     def __init__(self, errors: list, results: list) -> None:
         self.errors = errors
         self.results = results
 
     @staticmethod
     def from_dict(d: dict):
-        errors = d.get('error', [])
-        results = d.get('results', [])
+        quotes = d['quotes']
+        errors = quotes.get('error', [])  # optional
+        results = quotes['results']
         if results:
             results = [MSResult.from_dict(r) for r in results]
         return MSResponse(errors=errors, results=results)

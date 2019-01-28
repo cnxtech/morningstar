@@ -7,9 +7,10 @@ class TSResponse:
         self.results = results
 
     @staticmethod
-    def from_json(json_obj):
-        errors = json_obj.get('error', [])
-        results = json_obj.get('results', [])
+    def from_dict(d):
+        ts = d['ts']
+        errors = ts.get('error', [])
+        results = ts.get('results', [])
         if results:
             results = [TSResult.from_json(r) for r in results]
         return TSResponse(errors=errors, results=results)

@@ -1,6 +1,8 @@
 import requests
 import logging
 
+from morningstar.models.ms_response import MSResponse
+from morningstar.models.ts_response import TSResponse
 from morningstar.provider.provider import Provider
 
 logging.basicConfig(level=logging.INFO)
@@ -45,17 +47,13 @@ class Morningstar(Provider):
 
     def search(self, params):
         response = self._tenfore('search', params)
-        return response['quotes']['results']
+        return MSResponse.from_dict(response)
 
     def index(self, params):
         response = self._tenfore('index.php', params)
-        return response['quotes']['results']
+        return MSResponse.from_dict(response)
 
     def index_ts(self, params):
         response = self._morningstar('IndexTS', params)
-        results = response['ts']['results']
-        if len(results) > 0:
-            return results[0]['data']
-        return []
-
+        return TSResponse.from_dict(response)
 
