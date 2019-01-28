@@ -7,7 +7,7 @@ setuptools.setup(
     name='morningstar',
     version='0.0.1',
     description='Morningstar API Client',
-    url='https://gitlab.com/aaaccell/morningstar',
+    url='https://github.com/aaaccell/morningstar',
     author='Marc Juchli',
     author_email='marcjuchli@aaaccell.ch',
     license='MIT',
