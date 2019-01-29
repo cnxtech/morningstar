@@ -7,6 +7,18 @@ class Instrument:
         self.security_type = security_type
         self.symbol = symbol
 
+    def __key(self):
+        return self.exchange, self.security_type, self.symbol
+
+    def __hash__(self):
+        return hash(self.__key())
+
+    def __eq__(self, other):
+        return isinstance(self, type(other)) and self.__key() == other.__key()
+
+    def __repr__(self):
+        return '{}.{}.{}'.format(self.exchange, self.security_type, self.symbol)
+
     @staticmethod
     def from_string(s: str):
         l = s.split('.')
@@ -22,5 +34,3 @@ class Instrument:
             symbol=d[FieldNames.Symbol.value]
         )
 
-    def __repr__(self):
-        return '{}.{}.{}'.format(self.exchange, self.security_type, self.symbol)

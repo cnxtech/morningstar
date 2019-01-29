@@ -5,6 +5,12 @@ class MSResult:
     def __init__(self, data) -> None:
         self.data = data
 
+    def __repr__(self):
+        return str(self.__dict__)
+
+    def get(self, field_name, default=None):
+        return self.data.get(field_name, default)
+
     @staticmethod
     def from_dict(d: dict):
         return MSResult(data=d)
