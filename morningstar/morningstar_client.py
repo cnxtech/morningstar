@@ -2,7 +2,7 @@ import logging
 from datetime import datetime
 from typing import Tuple, Optional
 
-from build.lib.morningstar.models.ms_response import MSResponse
+from morningstar.models.ms_response import MSResponse
 from morningstar.config import config
 from morningstar.models.instrument import Instrument
 from morningstar.provider.morningstar import Morningstar
