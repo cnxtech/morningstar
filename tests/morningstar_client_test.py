@@ -16,7 +16,6 @@ CONFIG = yaml.safe_load(open(CONFIG_PATH))['provider']['morningstar']
 CONFIG_LIVE = None
 try:
     from morningstar.config import config
-
     CONFIG_LIVE = config.get("provider")['morningstar']
 except:
     logger.info("Skipping live tests.")

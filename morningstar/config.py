@@ -1,6 +1,9 @@
 import os
-
+import logging
 import yaml
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_FILE = "config-morningstar.yml"
@@ -18,4 +21,4 @@ for loc in os.path.join(os.curdir, CONFIG_FILE), \
         pass
 
 if config is None:
-    raise IOError("{} not found.".format(CONFIG_FILE))
+    logger.warning("{} not found.".format(CONFIG_FILE))
