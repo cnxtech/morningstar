@@ -7,7 +7,6 @@ This project provides a client to the Morningsar Web Services endpoints.
 Install as a dependency using pip:
 
 ```
-# Not ready yet
 pip install morningstar
 ```
 or install from source:
