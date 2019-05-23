@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='morningstar',
-    version='0.1.0',
+    version='0.2.1',
     description='Morningstar API Client',
     url='https://github.com/aaaccell/morningstar',
     author='Marc Juchli',
